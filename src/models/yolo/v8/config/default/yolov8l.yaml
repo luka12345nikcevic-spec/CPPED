@@ -11,8 +11,7 @@ warmup_epochs: 3.0
 optimizer: SGD
 patience: 50
 device: 0
-workers: 8
+workers: 4
 cos_lr: false
 augment: true
-project: /home/luka/workspace/CPPED/src/models/yolo/v8/weights
 name: yolov8l

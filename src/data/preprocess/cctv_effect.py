@@ -97,22 +97,22 @@ class CCTVEffect:
         frame = self.add_dust_haze(frame)
         frame = self.add_vignette(frame)
         return frame
-    
-INPUT_DIR = "/content/frames_ssim"
-OUTPUT_DIR = "/content/cctv_frames1"
-
-Path(OUTPUT_DIR).mkdir(exist_ok=True)
-
-effect = CCTVEffect(
-    scale=0.8,
-    fisheye_strength=0.0008,
-    blur_kernel=3,
-    dust_intensity=0.01,
-    vignette_strength=0.5
-)
-
 
 def main():
+    INPUT_DIR = "/content/frames_ssim"
+    OUTPUT_DIR = "/content/cctv_frames1"
+
+    Path(OUTPUT_DIR).mkdir(exist_ok=True)
+
+    effect = CCTVEffect(
+        scale=0.8,
+        fisheye_strength=0.0008,
+        blur_kernel=3,
+        dust_intensity=0.01,
+        vignette_strength=0.5
+    )
+
+
     for img_path in Path(INPUT_DIR).glob("*"):
         frame = cv2.imread(str(img_path))
         if frame is None:

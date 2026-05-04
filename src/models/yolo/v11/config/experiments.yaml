@@ -1,0 +1,16 @@
+weights: yolo11l.pt
+epochs: 100
+imgsz: 640
+batch: 8
+lr0: 0.001
+lrf: 0.01
+momentum: 0.937
+weight_decay: 0.0005
+warmup_epochs: 3.0
+optimizer: AdamW
+patience: 50
+device: 0
+workers: 4
+cos_lr: true
+augment: true
+name: yolov11l_adamW_cos

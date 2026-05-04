@@ -1,0 +1,17 @@
+weights: yolo11m.pt
+epochs: 100
+imgsz: 640
+batch: 16
+lr0: 0.01
+lrf: 0.01
+momentum: 0.937
+weight_decay: 0.0005
+warmup_epochs: 3.0
+optimizer: SGD
+patience: 50
+device: 0
+workers: 8
+cos_lr: false
+augment: true
+project: /home/luka/workspace/CPPED/src/models/yolo/v11/weights
+name: yolov11m
